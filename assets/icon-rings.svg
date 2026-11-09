@@ -1,0 +1,19 @@
+<svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg"><defs><filter id="sculpt" x="-4%" y="-4%" width="108%" height="108%" color-interpolation-filters="sRGB">
+  <feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  .3 .59 .11 0 0" result="lum"/>
+  <feComposite in="lum" in2="SourceAlpha" operator="in" result="lumIn"/>
+  <feGaussianBlur in="lumIn" stdDeviation="0.7" result="detail"/>
+  <feGaussianBlur in="SourceAlpha" stdDeviation="1.4" result="silhouette"/>
+  <feComposite in="silhouette" in2="detail" operator="arithmetic" k2=".62" k3=".38" result="height"/>
+  <feDiffuseLighting in="height" surfaceScale="2.2" diffuseConstant="1.22" lighting-color="#fffaf2" result="diffuse">
+    <feDistantLight azimuth="225" elevation="52"/>
+  </feDiffuseLighting>
+  <feSpecularLighting in="height" surfaceScale="2.2" specularConstant=".5" specularExponent="16" lighting-color="#fff4e0" result="spec">
+    <feDistantLight azimuth="225" elevation="40"/>
+  </feSpecularLighting>
+  <feComposite in="spec" in2="SourceAlpha" operator="in" result="specIn"/>
+  <feColorMatrix in="SourceGraphic" type="saturate" values=".82" result="tonal"/>
+  <feBlend in="tonal" in2="diffuse" mode="multiply" result="shaded"/>
+  <feComposite in="shaded" in2="SourceAlpha" operator="in" result="shadedIn"/>
+  <feComposite in="specIn" in2="shadedIn" operator="arithmetic" k2=".45" k3="1" result="lit"/>
+  <feComposite in="lit" in2="SourceAlpha" operator="in"/>
+</filter></defs><g filter="url(#sculpt)"><g><g filter="url(#filter2)" clip-path="url(#clip1)"><g><path transform="matrix(1 0 0 1 11 22)" d="M24 12C24 18.627 18.627 24 12 24C5.373 24 0 18.627 0 12C0 5.373 5.373 0 12 0C18.627 0 24 5.373 24 12" fill="none" stroke="#C09A5E" stroke-width="4"/></g><g><path transform="matrix(1 0 0 1 25 18)" d="M24 12C24 18.627 18.627 24 12 24C5.373 24 0 18.627 0 12C0 5.373 5.373 0 12 0C18.627 0 24 5.373 24 12" fill="none" stroke="#D1AD6E" stroke-width="4"/></g><g><path transform="matrix(1 0 0 1 33 8)" d="M0 6L4 0L8 6L4 10L0 6Z" fill="#FFFFFF"/><path transform="matrix(1 0 0 1 33 8)" d="M0 6L4 0L8 6L4 10L0 6Z" fill="none" stroke="#BBBBBB" stroke-width="1"/></g><g><path transform="matrix(1 0 0 1 10.377 44)" d="M3.623 2C-2.377 6 -0.377 12 5.623 12M35.623 0C41.623 4 39.623 10 33.623 10" fill="none" stroke="#8F9C86" stroke-width="2"/></g></g></g><defs><clipPath id="clip1"><path d="M0 0L60 0L60 60L0 60Z"/></clipPath><filter id="filter2" filterUnits="userSpaceOnUse" x="-6.723" y="-3.7" width="73.446" height="78.2" color-interpolation-filters="sRGB"><feOffset in="SourceAlpha" dx="0" dy="1.4"/><feGaussianBlur stdDeviation="1.1"/><feColorMatrix type="matrix" values="0 0 0 0 0.369 0 0 0 0 0.2 0 0 0 0 0.263 0 0 0 0.32 0" result="s0"/><feMerge><feMergeNode in="s0"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs></g></svg>

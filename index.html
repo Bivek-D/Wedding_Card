@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Camille &amp; Antoine · 13 June 2027</title>
+<meta name="description" content="Camille Lefèvre and Antoine Marchand invite you to celebrate their marriage on Saturday 13 June 2027 at Château de Belvent, Burgundy.">
+<meta name="theme-color" content="#F1E3EA">
+<meta property="og:title" content="Camille &amp; Antoine · 13 June 2027">
+<meta property="og:description" content="You're invited: Château de Belvent, Gevrey-Chambertin, Burgundy.">
+<link rel="icon" href="assets/plaque.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Pinyon+Script&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="assets/door-left.jpg">
+<link rel="preload" as="image" href="assets/door-right.jpg">
+<link rel="preload" as="image" href="assets/seal-left.png">
+<link rel="preload" as="image" href="assets/seal-right.png">
+<link rel="preload" as="image" href="assets/bathou.svg">
+<link rel="preload" as="image" href="assets/valance-assam.svg">
+<link rel="stylesheet" href="css/style.css?v=33">
+<script>document.documentElement.classList.add("js")</script>
+</head>
+<body>
+
+<!-- Intro: woven olive doors with the A&H seal (references/doors-mockup.png) -->
+<div class="intro" id="intro">
+  <button class="intro__stage" id="openInvite" aria-label="Open the invitation">
+    <!-- shadows the doors throw onto the stage as they swing out -->
+    <span class="door-cast door-cast--l"></span><span class="door-cast door-cast--r"></span>
+    <span class="door door--l"><span class="door__glow"></span><span class="door__shade"></span>
+      <!-- the badge splits along the seam: its left half rides the left door -->
+      <span class="seal seal--l"><img src="assets/seal-left.png" alt="" width="270" height="496"></span>
+    </span>
+    <span class="door door--r"><span class="door__glow"></span><span class="door__shade"></span>
+      <!-- the badge's right half rides the right door; a pearl seam runs down the meeting edge -->
+      <span class="seal seal--r"><img src="assets/seal-right.png" alt="" width="276" height="496"></span>
+      <span class="seam" aria-hidden="true"></span>
+    </span>
+    <span class="tap-hint">Tap to open</span>
+  </button>
+</div>
+
+<main class="app">
+
+  <!-- Hero: stage curtains over the wedding altar -->
+  <header class="hero" id="hero">
+    <div class="hero__pleats"></div>
+    <h1 class="names">
+      <span class="names__line">Camille</span>
+      <span class="names__amp">&amp;</span>
+      <span class="names__line">Antoine</span>
+      <span class="names__date">June 13, 2027</span>
+    </h1>
+    <!-- stage curtains: drawn and animated by js/main.js (bottom-up opening, pleats fan to the tie-backs) -->
+    <svg class="curtains" id="curtains" aria-hidden="true"></svg>
+    <img class="hero__valance" src="assets/valance-assam.svg" alt="" width="393" height="94">
+    <img class="hero__altar" src="assets/bathou.svg" alt="Illustration of a wedding altar: a sijou plant inside a round bamboo fence, under a bamboo frame draped with orange and green woven cloth and white flowers" width="393" height="472">
+    <span class="scroll-hint" aria-hidden="true">Scroll<i></i></span>
+  </header>
+
+  <!-- Bienvenue -->
+  <section class="page sec welcome" aria-labelledby="t-welcome">
+    <img class="fill" data-reveal="fade" src="assets/welcome-couple.svg" alt="" width="393" height="700" loading="lazy">
+    <img class="sway welcome__wis" data-depth=".08" data-reveal="fade" src="assets/wisteria-welcome.svg" alt="" width="393" height="108" loading="lazy">
+    <div class="block welcome__txt" data-reveal>
+      <h2 class="h2" id="t-welcome">Bienvenue</h2>
+      <p class="lead-it">à notre mariage</p>
+      <p class="it-s gap">Nous avons tellement hâte de célébrer ce jour magique avec vous, entourés de ceux que nous aimons.</p>
+    </div>
+    <img class="welcome__couple" data-depth="-.06" src="assets/couple.png" alt="Illustration of the couple, arm in arm in traditional dress" width="205" height="323" loading="lazy" data-reveal>
+  </section>
+
+  <!-- Countdown -->
+  <section class="page count" aria-labelledby="t-count">
+    <div class="count__top">
+      <img class="fill" data-reveal="fade" src="assets/garland.svg" alt="" width="393" height="147" loading="lazy">
+      <img class="sway count__wis" data-depth=".08" data-reveal="fade" src="assets/wisteria-countdown.svg" alt="" width="393" height="69" loading="lazy">
+    </div>
+    <h2 class="h1" id="t-count" data-reveal>Countdown</h2>
+    <div class="dials" data-reveal role="timer" aria-live="off">
+      <div class="dial"><b id="cdD">—</b><span>Days</span></div>
+      <div class="dial"><b id="cdH">—</b><span>Hours</span></div>
+      <div class="dial"><b id="cdM">—</b><span>Minutes</span></div>
+    </div>
+    <img class="count__pearls" data-depth="-.04" src="assets/pearl-garland.svg" alt="" width="393" height="167" loading="lazy" data-reveal="fade">
+  </section>
+
+  <!-- Invitation -->
+  <section class="page invite">
+    <p class="it" data-reveal>Together with their families</p>
+    <p class="invite__nm" data-reveal>Camille Lefèvre</p>
+    <p class="lead-it" data-reveal>and</p>
+    <p class="invite__nm" data-reveal>Antoine Marchand</p>
+    <p class="it" data-reveal>invite you to celebrate their marriage</p>
+    <p class="caps" data-reveal>Saturday, 13 June 2027</p>
+  </section>
+
+  <!-- Ceremony & Reception -->
+  <section class="page sec card" aria-labelledby="t-card">
+    <img class="card__art" data-depth=".03" data-reveal="fade" src="assets/card.svg" alt="" width="349" height="543" loading="lazy">
+    <div class="block card__txt" data-reveal>
+      <h2 class="h-card" id="t-card">Ceremony<br>&amp; Reception</h2>
+      <p class="caps-s">Where we celebrate</p>
+      <p class="venue">Château de Belvent</p>
+      <p class="caps-s">Gevrey-Chambertin<br>Bourgogne</p>
+      <p class="it">Ceremony · The Orangery · 5:00 PM<br>Reception · The Wine Cellar · 7:00 PM</p>
+      <a class="link" href="https://www.google.com/maps/search/?api=1&amp;query=Gevrey-Chambertin" target="_blank" rel="noopener"><span aria-hidden="true">⌖</span> Open in maps</a>
+      <a class="link" href="#" data-ics="wedding"><span aria-hidden="true">▢</span> Add to calendar</a>
+    </div>
+  </section>
+
+  <!-- Dress code -->
+  <section class="page sec dress" aria-labelledby="t-dress">
+    <img class="sway dress__strands" data-depth=".07" data-reveal="fade" src="assets/wisteria-strands.svg" alt="" width="393" height="285" loading="lazy">
+    <div class="block dress__txt" data-reveal>
+      <h2 class="h1" id="t-dress">Dress Code</h2>
+      <p class="lead-it">Black Tie</p>
+      <p class="it-s gap">The evening will be held in the grand terrace and halls; guests may wish to consider appropriate footwear.</p>
+    </div>
+    <!-- guests toast and dance in a loop -->
+    <svg class="dress__guests" data-depth="-.05" viewBox="0 0 360 170" role="img" aria-label="Guests in black tie raising a toast and dancing" data-reveal>
+      <defs><filter id="gEmb"><feDropShadow dx="0" dy="1.4" stdDeviation="1.1" flood-color="#5e3343" flood-opacity=".32"/></filter></defs>
+      <g transform="translate(20,0)" filter="url(#gEmb)">
+        <g class="guest" style="--d:0s" transform="translate(28,0)">
+          <g class="g-body">
+            <path class="g-leg" d="M-6,92 L-4,150 L2,150 L3,92Z" fill="#26222a"/><path class="g-leg" d="M2,92 L6,150 L12,150 L12,92Z" fill="#26222a"/>
+            <path d="M-12,40 L12,40 L14,94 L-14,94Z" fill="#26222a"/><path d="M-4,40 L0,58 L4,40Z" fill="#fff"/>
+            <circle cy="28" r="9" fill="#ecc9b4"/><path d="M-9,25 C-8,15 8,15 9,25 C5,21 -5,21 -9,25Z" fill="#4a3a33"/>
+            <path class="g-arm-low" d="M-10,46 L-16,80" stroke="#26222a" stroke-width="6" stroke-linecap="round"/>
+            <g class="g-arm toast"><path d="M10,46 L22,24" stroke="#26222a" stroke-width="6" stroke-linecap="round"/><path d="M20,10 h8 l-1,10 h-6Z M24,20 v6" fill="#f2ebcf" stroke="#c2b47e"/></g>
+          </g>
+        </g>
+        <g class="guest sway-dress" style="--d:-.3s" transform="translate(78,0)">
+          <g class="g-body">
+            <path d="M-9,40 L9,40 L11,76 C20,110 22,140 24,154 L-24,154 C-22,140 -20,110 -11,76Z" fill="#b7737f"/>
+            <circle cy="28" r="9" fill="#ecc9b4"/><path d="M-10,30 C-12,14 12,12 10,30 C12,40 6,44 4,36 C6,24 -6,24 -4,36 C-6,44 -12,40 -10,30Z" fill="#b48a5c"/>
+            <path d="M-10,46 L-16,80" stroke="#b7737f" stroke-width="6" stroke-linecap="round"/>
+            <g class="g-arm toast"><path d="M10,46 L22,24" stroke="#b7737f" stroke-width="6" stroke-linecap="round"/><path d="M20,10 h8 l-1,10 h-6Z M24,20 v6" fill="#f2ebcf" stroke="#c2b47e"/></g>
+          </g>
+        </g>
+        <g class="guest dancer" style="--d:-.15s" transform="translate(128,0) scale(-1,1)">
+          <g class="g-body">
+            <path d="M-6,92 L-4,150 L2,150 L3,92Z" fill="#26222a"/>
+            <path class="g-kick" d="M2,92 L6,150 L12,150 L12,92Z" fill="#26222a"/>
+            <path d="M-12,40 L12,40 L14,94 L-14,94Z" fill="#26222a"/><path d="M-4,40 L0,58 L4,40Z" fill="#fff"/>
+            <circle cy="28" r="9" fill="#ecc9b4"/><path d="M-9,25 C-8,15 8,15 9,25 C5,21 -5,21 -9,25Z" fill="#4a3a33"/>
+            <g class="g-arm wave"><path d="M-10,46 L-22,26" stroke="#26222a" stroke-width="6" stroke-linecap="round"/></g>
+            <g class="g-arm toast"><path d="M10,46 L22,24" stroke="#26222a" stroke-width="6" stroke-linecap="round"/><path d="M20,10 h8 l-1,10 h-6Z M24,20 v6" fill="#f2ebcf" stroke="#c2b47e"/></g>
+          </g>
+        </g>
+        <g class="guest sway-dress" style="--d:-.55s" transform="translate(178,0)">
+          <g class="g-body">
+            <path d="M-9,40 L9,40 L11,76 C20,110 22,140 24,154 L-24,154 C-22,140 -20,110 -11,76Z" fill="#ece2d6"/>
+            <circle cy="28" r="9" fill="#ecc9b4"/><path d="M-10,30 C-12,14 12,12 10,30 C12,40 6,44 4,36 C6,24 -6,24 -4,36 C-6,44 -12,40 -10,30Z" fill="#c9a46c"/>
+            <path d="M-10,46 L-16,80" stroke="#ece2d6" stroke-width="6" stroke-linecap="round"/>
+            <g class="g-arm toast"><path d="M10,46 L22,24" stroke="#ece2d6" stroke-width="6" stroke-linecap="round"/><path d="M20,10 h8 l-1,10 h-6Z M24,20 v6" fill="#f2ebcf" stroke="#c2b47e"/></g>
+          </g>
+        </g>
+        <g class="guest" style="--d:-.4s" transform="translate(232,0)">
+          <g class="g-body">
+            <path d="M-6,92 L-4,150 L2,150 L3,92Z" fill="#26222a"/><path d="M2,92 L6,150 L12,150 L12,92Z" fill="#26222a"/>
+            <path d="M-12,40 L12,40 L14,94 L-14,94Z" fill="#26222a"/><path d="M-4,40 L0,58 L4,40Z" fill="#fff"/>
+            <circle cy="28" r="9" fill="#ecc9b4"/><path d="M-9,25 C-8,15 8,15 9,25 C5,21 -5,21 -9,25Z" fill="#3a2c26"/>
+            <path d="M-10,46 L-16,80" stroke="#26222a" stroke-width="6" stroke-linecap="round"/>
+            <g class="g-arm toast"><path d="M10,46 L22,24" stroke="#26222a" stroke-width="6" stroke-linecap="round"/><path d="M20,10 h8 l-1,10 h-6Z M24,20 v6" fill="#f2ebcf" stroke="#c2b47e"/></g>
+          </g>
+        </g>
+        <g class="guest sway-dress" style="--d:-.7s" transform="translate(290,0) scale(-1,1)">
+          <g class="g-body">
+            <path d="M-9,40 L9,40 L11,76 C20,110 22,140 24,154 L-24,154 C-22,140 -20,110 -11,76Z" fill="#9aa58f"/>
+            <circle cy="28" r="9" fill="#ecc9b4"/><path d="M-10,30 C-12,14 12,12 10,30 C12,40 6,44 4,36 C6,24 -6,24 -4,36 C-6,44 -12,40 -10,30Z" fill="#b48a5c"/>
+            <path d="M-10,46 L-16,80" stroke="#9aa58f" stroke-width="6" stroke-linecap="round"/>
+            <g class="g-arm toast"><path d="M10,46 L22,24" stroke="#9aa58f" stroke-width="6" stroke-linecap="round"/><path d="M20,10 h8 l-1,10 h-6Z M24,20 v6" fill="#f2ebcf" stroke="#c2b47e"/></g>
+          </g>
+        </g>
+        <path d="M-20,156 H340" stroke="#d8c2c9"/>
+      </g>
+    </svg>
+  </section>
+
+  <!-- Our story -->
+  <section class="page sec story" aria-labelledby="t-story">
+    <img class="story__arch" data-depth=".04" data-reveal="fade" src="assets/floral-arch.svg" alt="" width="393" height="590" loading="lazy">
+    <div class="block story__txt" data-reveal>
+      <h2 class="h1" id="t-story">Our Story</h2>
+      <p class="it-s">We met in Burgundy, fell in love over long dinners and even longer walks through the vines. Now we are returning to the place where it all began, to begin the rest of our lives together.</p>
+    </div>
+  </section>
+
+  <!-- Timeline -->
+  <section class="page timeline" aria-labelledby="t-tl">
+    <h2 class="h1" id="t-tl" data-reveal>Timeline</h2>
+    <ol class="tl" id="tl">
+      <li class="tl__pearl" id="tlPearl" aria-hidden="true"></li>
+      <li class="ev" data-reveal><img src="assets/icon-chapel.svg" alt="" width="60" height="60"><div><b>4:45 PM</b><span class="caps-s">Guests to arrive<br>at the Orangery</span></div></li>
+      <li class="ev" data-reveal><img src="assets/icon-rings.svg" alt="" width="60" height="60"><div><b>5:00 PM</b><span class="caps-s">Ceremony<br>commences</span></div></li>
+      <li class="ev" data-reveal><img src="assets/icon-cocktail.svg" alt="" width="60" height="60"><div><b>6:00 PM</b><span class="caps-s">Cocktail hour</span></div></li>
+      <li class="ev" data-reveal><img src="assets/icon-disco.svg" alt="" width="60" height="60"><div><b>7:00 PM</b><span class="caps-s">Reception<br>and dancing</span></div></li>
+      <li class="ev" data-reveal><img src="assets/icon-champagne.svg" alt="" width="60" height="60"><div><b>11:00 PM</b><span class="caps-s">Farewell</span></div></li>
+    </ol>
+    <p class="it-s timeline__note" data-reveal>The ceremony will take place in the Orangery of Château de Belvent and will be followed by an evening in the wine cellar.</p>
+  </section>
+
+  <!-- Recovery day -->
+  <section class="page recovery" aria-labelledby="t-rec">
+    <img class="recovery__vine" src="assets/vine.svg" alt="" width="393" height="59" loading="lazy" data-reveal="fade">
+    <h2 class="h1" id="t-rec" data-reveal>Recovery Day</h2>
+    <p class="caps-s" data-reveal>Join us the day after</p>
+    <div class="pavilion" data-reveal data-depth="-.04">
+      <img src="assets/pavilion.svg" alt="Illustration of Le Comptoir des Halles" width="270" height="153" loading="lazy">
+      <span class="pavilion__sign" aria-hidden="true">Les Halles</span>
+    </div>
+    <p class="venue" data-reveal>Le Comptoir des Halles</p>
+    <p class="caps-s" data-reveal>Beaune · Bourgogne</p>
+    <dl class="when" data-reveal>
+      <div><dt class="caps-s">Date</dt><dd class="it">Sunday, 14 June 2027</dd></div>
+      <div><dt class="caps-s">Time</dt><dd class="it">From 12:00 PM</dd></div>
+    </dl>
+    <p class="it-s recovery__body" data-reveal>We will be lingering in the garden terrace for a relaxed lunch the day after. All are welcome to join us for one last glass.</p>
+    <div class="links" data-reveal>
+      <a class="link" href="https://www.google.com/maps/search/?api=1&amp;query=Le+Comptoir+des+Halles+Beaune" target="_blank" rel="noopener"><span aria-hidden="true">⌖</span> Open in maps</a>
+      <a class="link" href="#" data-ics="recovery"><span aria-hidden="true">▢</span> Add to calendar</a>
+    </div>
+  </section>
+
+  <!-- Gifts -->
+  <section class="page sec gifts" aria-labelledby="t-gifts">
+    <img class="gifts__frame" data-depth=".03" data-reveal="fade" src="assets/frame.svg" alt="" width="357" height="483" loading="lazy">
+    <div class="block gifts__txt" data-reveal>
+      <h2 class="h1 h1--xl" id="t-gifts">Gifts</h2>
+      <p class="it">Your presence at our wedding is the greatest gift of all. Should you wish to celebrate with a gift, a wishing well will be available at the reception.</p>
+    </div>
+  </section>
+
+  <footer class="page foot" data-reveal>
+    <p class="foot__sig">Camille &amp; Antoine</p>
+    <p class="caps">13 · 06 · 2027</p>
+  </footer>
+</main>
+
+<script src="js/main.js?v=33" defer></script>
+<script type="module" src="js/stage3d.js?v=10"></script>
+</body>
+</html>
